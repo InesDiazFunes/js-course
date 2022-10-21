@@ -4,21 +4,53 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
-body {
-  background-color: rgb(24, 39, 44);
+h1::-moz-selection, h3::-moz-selection {
+  color: #f8762a;
 }
-body .titulo {
+
+h1::selection, h3::selection {
+  color: #f8762a;
+}
+
+img::-moz-selection {
+  background-color: rgb(77, 34, 195);
+}
+
+img::selection {
+  background-color: rgb(77, 34, 195);
+}
+
+.hero {
+  background-color: #f8762a;
+}
+.hero .top {
+  position: relative;
+  top: -50px;
+  left: 50px;
+}
+.hero .top .logo {
+  width: 150px;
+}
+.hero .titulo {
   position: absolute;
   font-weight: 400;
-  top: 150px;
-  padding: 100px;
+  top: 25%;
+  padding: 60px;
   font-size: 60px;
   right: 10%;
   left: 100px;
-  background: rgb(0, 36, 25);
-  background: linear-gradient(180deg, rgb(0, 36, 25) 28%, rgb(56, 50, 142) 52%, rgb(11, 142, 168) 100%);
+  background: rgb(77, 34, 195);
+  background: linear-gradient(0deg, rgb(77, 34, 195) 0%, rgb(253, 187, 45) 100%);
   color: #fff;
   box-shadow: 15px 15px 205px rgb(10, 10, 10);
+  text-shadow: 10px 10px rgb(77, 34, 195);
+}
+.hero .titulo h3 {
+  font-weight: lighter;
+  font-size: 20px;
+  position: absolute;
+  padding: 15px;
 }/*# sourceMappingURL=styles.css.map */
