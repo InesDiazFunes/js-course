@@ -9,8 +9,7 @@
 body {
   background-color: rgb(24, 39, 44);
 }
-
-.titulo {
+body .titulo {
   position: absolute;
   font-weight: 400;
   top: 150px;
