@@ -9,10 +9,12 @@
 
 h1::-moz-selection, h3::-moz-selection {
   color: #f8762a;
+  text-shadow: 10px 10px black;
 }
 
 h1::selection, h3::selection {
   color: #f8762a;
+  text-shadow: 10px 10px black;
 }
 
 img::-moz-selection {
