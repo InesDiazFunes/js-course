@@ -111,5 +111,6 @@
 // console.log(preciosActualizados);
 
 
-let usuario = prompt("Cree su usuario. Ingrese su nnombre.");
+let usuario = prompt("Cree su usuario. Ingrese su nombre.");
+
 console.log(usuario);
