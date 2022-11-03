@@ -41,7 +41,7 @@
 
 // "Armario", "Escritorio", "Cama", "Puerta"
 
-const productos = ["Sillon", "Silla", "Mesa", "Ropero"];
+// const productos = ["Sillon", "Silla", "Mesa", "Ropero"];
 // console.log(productos);
 // console.log(productos[2]);
 // for (let i = 0; i < 4 ; i++){
@@ -63,7 +63,53 @@ const productos = ["Sillon", "Silla", "Mesa", "Ropero"];
 // const producto2 = ["Puerta", "Ventana", "Cama"];
 // const productoFinal = productos.concat(producto2); //(Unir dos Arrays)
 
-//const productosComedor = productos.slice(0, 2); // ()
+//const productosComedor = productos.slice(0, 2); // (Generar una copia de parte del Array)
 
-console.log(productosComedor);
+//console.log(productos.indexOf("Silla")); //Saber el numero de indice de nuestro elemento
+// console.log(productos.includes("Espejo")); //(Saber si un elemento existe en nuestro Array) (Posiblemente mi fav hasta ahora)
+// console.log(productos.reverse()); //(Invertir el orden de nuestro Array)
+//productos.reverse(); console.log(productos.reverse()); (Se puede llamar como una funcion tambien)
 
+// const productos = [
+//     { nombre: "Mesa", precio:3000 },
+//     { nombre: "Silla de Plástico", precio:3500 },
+//     { nombre: "Silla de Madera", precio:2000 },
+//     { nombre: "Ventana", precio:2500 },
+//     { nombre: "Puerta", precio:4000 }
+// ];
+
+// const mascotas = ["Gato", "Perro", "Huron"];
+
+// const amimales = [
+//     { nombre: "Gato", color: "Naranja" },
+//     { nombre: "Perro", color: "Negro" },
+//     { nombre: "Ganzo", color: "Gris" },
+//     { nombre: "Carpincho", color: "Marron" },
+//     { nombre: "Gato", color: "Manchado" },
+//     { nombre: "Raton", color: "Blanco" }
+// ];
+
+// console.log(productos);
+
+// let productoElegido = prompt("Ingrese el producto que quiere comprar");
+
+// console.log( productos.find( (producto) => producto.nombre === productoElegido ) ); //(Recorrer el Array y retornar el primer elemento que cumpla con una condicion)
+
+// const sillas = productos.filter((producto) => producto.nombre.includes  ("Silla")); //HERMOSO POR FAVOR; ESTO ES HERMOSO 
+// console.log(sillas);
+
+// const nombres = productos.map((producto) => producto.nombre); // (Recorrer el Array y retornar un Array nuevo con los elementos llamados transformados del Array original)
+// console.log(nombres);
+
+// const preciosActualizados = productos.map((producto) => {
+//     return{
+//         nombre: producto.nombre,
+//         precio: producto.precio *1.5
+//     }
+// })
+// console.log(productos);
+// console.log(preciosActualizados);
+
+
+let usuario = prompt("Cree su usuario. Ingrese su nnombre.");
+console.log(usuario);

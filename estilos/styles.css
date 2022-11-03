@@ -18,11 +18,11 @@ h1::selection, h3::selection {
 }
 
 img::-moz-selection {
-  background-color: rgb(77, 34, 195);
+  background-color: #f8762a;
 }
 
 img::selection {
-  background-color: rgb(77, 34, 195);
+  background-color: #f8762a;
 }
 
 .hero {
