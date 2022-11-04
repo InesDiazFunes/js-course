@@ -59,4 +59,9 @@ img::selection {
   position: absolute;
   padding: 30px;
   margin-top: 180px;
-}/*# sourceMappingURL=styles.css.map */
+  padding: 30px;
+  margin-top: 180px;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
