@@ -9,7 +9,7 @@ const usuario = [
 ];
  
 console.log(usuario);
-alert("Hola " + nombre + "  " + apellido + ". Disfrute de sus compras!");
+alert("Hola " + nombre + " " + apellido + ". Disfrute de sus compras!");
 
 const productos = [
     { articulos: "Celular Xiaomi", precio: 5000},
