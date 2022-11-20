@@ -4,58 +4,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
 }
 
-h1::-moz-selection, h3::-moz-selection {
-  color: #f8762a;
-  text-shadow: 10px 10px black;
-}
-
-h1::selection, h3::selection {
-  color: #f8762a;
-  text-shadow: 10px 10px black;
-}
-
-img::-moz-selection {
-  background-color: rgb(77, 34, 195);
-}
-
-img::selection {
-  background-color: rgb(77, 34, 195);
-}
-
-.hero {
-  background-color: #f8762a;
-}
-.hero .top {
-  position: relative;
-  top: -50px;
-  left: 50px;
-}
-.hero .top .logo {
-  width: 150px;
-}
-.hero .titulo {
-  position: absolute;
-  font-weight: 400;
-  top: 25%;
-  padding: 60px;
-  font-size: 60px;
-  right: 10%;
-  left: 100px;
-  background: rgb(77, 34, 195);
-  background: linear-gradient(0deg, rgb(77, 34, 195) 0%, rgb(253, 187, 45) 100%);
-  color: #fff;
-  box-shadow: 15px 15px 205px rgb(10, 10, 10);
-  text-shadow: 10px 10px rgb(77, 34, 195);
-}
-.hero .titulo h3 {
-  font-weight: lighter;
-  font-size: 20px;
-  position: absolute;
-  padding: 15px;
-}
-
-
-/*# sourceMappingURL=styles.css.map */
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */

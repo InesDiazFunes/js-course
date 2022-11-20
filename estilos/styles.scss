@@ -5,48 +5,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
 }
 
-h1::selection , h3::selection{
-    color: #f8762a;
-    text-shadow: 10px 10px black;
+a{
+    text-decoration: none;
 }
-img::selection{
-    background-color: rgba(77,34,195,1);
-}
-.hero{
-    background-color: #f8762a;
-    .top{
-        position: relative;
-        top: -50px;
-        left: 50px;
-            .logo{ 
-                width: 150px;
-            }
-            
-    }
-    .titulo{
-        position: absolute;
-        font-weight: 400;
-        top: 25%;
-        padding: 60px;
-        font-size: 60px;
-        right: 10%;
-        left: 100px;
-        background: rgb(77,34,195);
-        background: linear-gradient(0deg, rgba(77,34,195,1) 0%, rgba(253,187,45,1) 100%);
-        color: #fff;
-        box-shadow: 15px 15px 205px rgb(10, 10, 10);
-        text-shadow: 10px 10px rgba(77,34,195,1);
-            h3{
-                font-weight: lighter;
-                font-size: 20px;
-                position: absolute;
-                padding: 15px;
-            }
-    }
-}
+
 
 
 
