@@ -1,29 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "./var.scss";
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    font-family: 'Rubik', sans-serif;
 }
 
-h1::selection , h3::selection{
-    color: #f8762a;
-    text-shadow: 10px 10px black;
+p{
+    padding: 0;
+    margin: 0;
 }
+<<<<<<< HEAD
 img::selection{
     background-color: #f8762a;
+=======
+
+a{
+    text-decoration: none;
+>>>>>>> user
 }
-.hero{
-    background-color: #f8762a;
-    .top{
-        position: relative;
-        top: -50px;
-        left: 50px;
-            .logo{ 
-                width: 150px;
+
+ul{
+    list-style: none;
+}
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: $mainColour;
+}
+
+aside{
+    padding: 2rem;
+    padding-right: 0;
+    color: $mint;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        
+        .logo{
+            font-weight: 1px;
+            font-size: 30px;
+        }
+
+        .texto-footer{
+            color: $secondary;
+        }
+
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+        }
+
+        .menu-button{
+            background-color: transparent;
+            border: 0;
+            color: $mint;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            gap: 1rem;
+            font-weight: 600;
+            padding: 1rem;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            position: relative;
+            width: 100%;
+            & > i.bi-hand-index-thumb-fill, i.bi-hand-index-thumb{
+                transform: rotateZ(90deg);
             }
+<<<<<<< HEAD
             
     }
 }
@@ -49,6 +103,187 @@ img::selection{
         position: absolute;
         padding: 30px;
         margin-top: 180px;
+=======
+            &.active{
+                background-color: $mint;
+                color: $mainColour;
+            }
+            &.active::before{
+                content: '';
+                position: absolute;
+                width: 1rem;
+                height: 2rem;
+                bottom: 100%;
+                right: 0;
+                border-bottom-right-radius: 1rem;
+                box-shadow: 0 1rem 0 $mint;
+            }
+            &.active::after{
+                content: '';
+                position: absolute;
+                width: 1rem;
+                height: 2rem;
+                top: 100%;
+                right: 0;
+                border-top-right-radius: 1rem;
+                box-shadow: 0 -1rem 0 $mint;
+            }
+            &.cart-button{
+                margin-top: 2rem;
+            }
+            .cart-amount{
+                padding: .15rem .25rem;
+                background-color: $mint;
+                color: $mainColour;
+                border-radius: 25rem;
+            }
+        } 
+}
+
+main{
+    background-color: $mint;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+    
+    .titulo-principal{
+        color: $mainColour;
+        margin-bottom: 2rem;
+    }
+    
+    .products-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+    }
+
+    .product-img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    .product-details{
+        background-color: $mainColour;
+        color: $mint;
+        padding: .5rem;
+        border-radius: 1rem;
+        margin-top: -2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .product-title{
+        font-size: 1rem;
+    }
+
+    .product-add{
+        border: 0;
+        background-color: $mint;
+        color: $mainColour;
+        padding: .25rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        border: 2px solid $mint;
+    }
+    .product-add:hover{
+        background-color: $mainColour;
+        color: $mint;
+    }
+
+}
+
+/*********** CART ***********/
+
+.cart-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .empty-cart, .bought-cart{
+        color: $mainColour;
+    }
+    
+    .products-cart{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-cart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $grey;
+        color: $mainColour;
+        padding: .5rem;
+        border-radius: 1rem;
+        padding: .5rem;
+        padding-right: 1.5;
+    }
+
+    .product-cart-title{
+        & h3 { 
+            font-size: 20px;
+        }
+        & small {
+            font-size: .75rem;
+        }
+    }
+
+    .product-cart-img{
+        width: 4rem;
+        border-radius: 0.75rem;
+    }
+
+    .product-cart-delete{
+        border: 0;
+        background-color: transparent;
+        color: red;
+        padding-right: .5rem;
+        
+    }
+
+    .cart-actions{
+        display: flex;
+        justify-content: space-between;
+        
+        .cart-actions-empty{
+            border: 0;
+            background-color: $grey;
+            padding: 1rem;
+            border-radius: 1rem ;
+            color: $mainColour;
+            cursor: pointer;
+        }
+        .cart-actions-buy{
+            border: 0;
+            background-color: $mainColour;
+            padding: 1rem;
+            border-top-right-radius: 1rem ;
+            border-bottom-right-radius: 1rem;
+            color: $mint;
+            cursor: pointer;
+        }
+        .cart-actions-total{
+            display: flex;
+            background-color: $grey;
+            padding: 1rem;
+            border-top-left-radius: 1rem ;
+            border-bottom-left-radius: 1rem;
+            color: $mainColour; 
+        }
+        
+        .cart-actions-right{
+            display: flex;
+        }
+    }
+    .disabled{
+        display: none;
+>>>>>>> user
     }
 }
 
