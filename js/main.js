@@ -106,7 +106,7 @@ const productos = [
         imagen: "./img/jblSpeaker.jpg",
         categoria: {
             nombre: "Speaker",
-            id: "speaker"
+            id: "Speaker"
         },
         precio: 150000
     },
