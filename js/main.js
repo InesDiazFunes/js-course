@@ -5,7 +5,7 @@ const productos = [
         imagen: "./img/xiaomiRedmiNote12.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -15,7 +15,7 @@ const productos = [
         imagen: "./img/xiaomiRedmiNote11.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -25,7 +25,7 @@ const productos = [
         imagen: "./img/xiaomiRedmiNote10.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -35,7 +35,7 @@ const productos = [
         imagen: "./img/xiaomiRedmiNote9.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -45,7 +45,7 @@ const productos = [
         imagen: "./img/iphone14.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -55,7 +55,7 @@ const productos = [
         imagen: "./img/iphone13.jpeg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -65,7 +65,7 @@ const productos = [
         imagen: "./img/iphone12.jpg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -75,7 +75,7 @@ const productos = [
         imagen: "./img/iphone11.jpeg",
         categoria: {
             nombre: "Celulares",
-            id: "celular"
+            id: "Phones"
         },
         precio: 150000
     },
@@ -85,7 +85,7 @@ const productos = [
         imagen: "./img/samsungQLED.webp",
         categoria: {
             nombre: "TV",
-            id: "tv"
+            id: "Tv"
         },
         precio: 150000
     },
@@ -95,7 +95,7 @@ const productos = [
         imagen: "./img/samsungCrystal.webp",
         categoria: {
             nombre: "TV",
-            id: "tv"
+            id: "Tv"
         },
         precio: 150000
     },
@@ -115,7 +115,7 @@ const productos = [
         imagen: "./img/sonySpeaker.webp",
         categoria: {
             nombre: "Speaker",
-            id: "speaker"
+            id: "Speaker"
         },
         precio: 150000
     },
@@ -125,16 +125,22 @@ const productos = [
         imagen: "./img/beatSpeaker.jpeg",
         categoria: {
             nombre: "Speaker",
-            id: "speaker"
+            id: "Speaker"
         },
         precio: 150000
     }
 ];
 
 const productWrapper = document.querySelector("#jsProducts");
+const botonesCategorias = document.querySelectorAll(".boton-categoria");
+const tituloPrincipal = document.querySelector("#titulo-principal");
+let botonesAdd = document.querySelectorAll(".product-add");
+const numerito = document.querySelector("#cart-amount");
 
-function cargarProductos() {
-    productos.forEach(product => {
+function cargarProductos(productosElegidos) {
+
+    productWrapper.innerHTML = "";
+    productosElegidos.forEach(product => {
 
         const div = document.createElement("div");
         div.classList.add("product");
@@ -148,9 +154,69 @@ function cargarProductos() {
         `;
         productWrapper.append(div);
     })
+    updateBotonAdd();
 
-    
 }
 
+cargarProductos(productos);
 
-cargarProductos();
+botonesCategorias.forEach(boton => {
+    boton.addEventListener("click", (e) =>{
+
+        botonesCategorias.forEach(boton => boton.classList.remove("active"));
+        e.currentTarget.classList.add("active");
+
+        if (e.currentTarget.id != "All") {
+            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+            
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
+
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+        cargarProductos(productosBoton);
+        }else{
+            tituloPrincipal.innerText = "Home"
+            cargarProductos(productos);
+        }
+    })
+})
+
+function updateBotonAdd(){
+    botonesAdd = document.querySelectorAll(".product-add");
+
+    botonesAdd.forEach(boton => {
+        boton.addEventListener("click", agregarCarrito);
+    });
+}
+
+let productCart;
+
+const productCartLS = JSON.parse(localStorage.getItem("product-cart"));
+
+if(productCartLS){
+    productCart = productCartLS;
+    updateNumerito();
+} else {
+    productCart = [];
+}
+
+function agregarCarrito(e) {
+    const idBoton = e.currentTarget.id;
+    const productAdded = productos.find(producto => producto.id === idBoton);
+
+    if (productCart.some(producto => producto.id === idBoton)) {
+        const index = productCart.findIndex(producto => producto.id === idBoton);
+        productCart[index].cantidad++;
+    } else {
+        productAdded.cantidad = 1;
+        productCart.push(productAdded);
+    }
+
+    updateNumerito();
+
+    localStorage.setItem("product-cart", JSON.stringify(productCart));
+}
+
+function updateNumerito(){
+    let newNumerito = productCart.reduce((acc, producto) => acc + producto.cantidad, 0);
+    numerito.innerText = newNumerito;
+}

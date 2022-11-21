@@ -68,13 +68,13 @@ aside{
             border-top-left-radius: 1rem;
             border-bottom-left-radius: 1rem;
             position: relative;
+            width: 100%;
             & > i.bi-hand-index-thumb-fill, i.bi-hand-index-thumb{
                 transform: rotateZ(90deg);
             }
             &.active{
                 background-color: $mint;
                 color: $mainColour;
-                width: 100%;
             }
             &.active::before{
                 content: '';
@@ -127,7 +127,7 @@ main{
     }
 
     .product-img{
-        max-width: 100%;
+        width: 100%;
         border-radius: 1rem;
     }
 
@@ -204,6 +204,7 @@ main{
 
     .product-cart-img{
         width: 4rem;
+        border-radius: 0.75rem;
     }
 
     .product-cart-delete{
@@ -211,6 +212,7 @@ main{
         background-color: transparent;
         color: red;
         padding-right: .5rem;
+        
     }
 
     .cart-actions{
