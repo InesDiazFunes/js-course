@@ -13,14 +13,9 @@ p{
     padding: 0;
     margin: 0;
 }
-<<<<<<< HEAD
-img::selection{
-    background-color: #f8762a;
-=======
 
 a{
     text-decoration: none;
->>>>>>> user
 }
 
 ul{
@@ -77,33 +72,6 @@ aside{
             & > i.bi-hand-index-thumb-fill, i.bi-hand-index-thumb{
                 transform: rotateZ(90deg);
             }
-<<<<<<< HEAD
-            
-    }
-}
-
-.textoDiv{
-    position: absolute;
-    top: 25%;
-    padding: 110px;
-    right: 10%;
-    left: 100px;
-    background: rgb(77,34,195);
-    background: linear-gradient(0deg, rgba(77,34,195,1) 0%, rgba(253,187,45,1) 100%);
-    color: #fff;
-    box-shadow: 15px 15px 205px rgb(10, 10, 10);
-    text-shadow: 10px 10px rgba(77,34,195,1);
-    .titulo{
-        font-size: 85px;
-        font-weight: 900;
-    }
-    h3{
-        font-weight: lighter;
-        font-size: 20px;
-        position: absolute;
-        padding: 30px;
-        margin-top: 180px;
-=======
             &.active{
                 background-color: $mint;
                 color: $mainColour;
@@ -244,7 +212,6 @@ main{
         background-color: transparent;
         color: red;
         padding-right: .5rem;
-        
     }
 
     .cart-actions{
@@ -283,7 +250,6 @@ main{
     }
     .disabled{
         display: none;
->>>>>>> user
     }
 }
 

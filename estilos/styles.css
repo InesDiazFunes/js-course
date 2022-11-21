@@ -15,7 +15,6 @@ a {
   text-decoration: none;
 }
 
-
 ul {
   list-style: none;
 }
@@ -68,7 +67,6 @@ aside .menu-button {
 aside .menu-button > i.bi-hand-index-thumb-fill, aside .menu-button i.bi-hand-index-thumb {
   transform: rotateZ(90deg);
 }
-
 aside .menu-button.active {
   background-color: #EAF2EF;
   color: #802fa0;
