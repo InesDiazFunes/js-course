@@ -8,7 +8,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 187000
     },
     {
         id: "celular-02",
@@ -18,7 +18,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 160000
     },
     {
         id: "celular-03",
@@ -28,7 +28,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 115000
     },
     {
         id: "celular-04",
@@ -38,7 +38,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 100000
     },
     {
         id: "celular-05",
@@ -48,7 +48,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 165700
     },
     {
         id: "celular-06",
@@ -58,7 +58,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 130000
     },
     {
         id: "celular-07",
@@ -68,7 +68,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 130000
     },
     {
         id: "celular-08",
@@ -78,7 +78,7 @@ const productos = [
             nombre: "Celulares",
             id: "Phones"
         },
-        precio: 150000
+        precio: 120000
     },
     {
         id: "tv-01",
@@ -88,7 +88,7 @@ const productos = [
             nombre: "TV",
             id: "Tv"
         },
-        precio: 150000
+        precio: 850000
     },
     {
         id: "tv-02",
@@ -98,7 +98,7 @@ const productos = [
             nombre: "TV",
             id: "Tv"
         },
-        precio: 150000
+        precio: 900000
     },
     {
         id: "speaker-01",
@@ -108,7 +108,7 @@ const productos = [
             nombre: "Speaker",
             id: "Speaker"
         },
-        precio: 150000
+        precio: 13590
     },
     {
         id: "speaker-02",
@@ -118,7 +118,7 @@ const productos = [
             nombre: "Speaker",
             id: "Speaker"
         },
-        precio: 150000
+        precio: 1590
     },
     {
         id: "speaker-03",
@@ -128,7 +128,7 @@ const productos = [
             nombre: "Speaker",
             id: "Speaker"
         },
-        precio: 150000
+        precio: 20000
     }
 ];
 
@@ -191,14 +191,16 @@ function updateBotonAdd(){
 
 let productCart;
 
-const productCartLS = JSON.parse(localStorage.getItem("product-cart"));
+let productCartLS = localStorage.getItem("product-cart");
 
 if(productCartLS){
-    productCart = productCartLS;
+    productCart = JSON.parse(productCartLS);
     updateNumerito();
 } else {
     productCart = [];
 }
+
+
 
 function agregarCarrito(e) {
     const idBoton = e.currentTarget.id;

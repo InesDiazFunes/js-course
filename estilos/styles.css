@@ -13,6 +13,11 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
 }
 
 ul {
@@ -189,6 +194,7 @@ main .product-add:hover {
   background-color: transparent;
   color: red;
   padding-right: 0.5rem;
+  cursor: pointer;
 }
 .cart-wrapper .cart-actions {
   display: flex;
