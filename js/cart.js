@@ -81,12 +81,68 @@ function productDelete(e) {
 
 botonEmpty.addEventListener("click", vaciarCarrito);
 
+// pruebas
+
 function vaciarCarrito(){
-    productCart.length = 0;
-    localStorage.setItem("product-cart", JSON.stringify(productCart));
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Are you sure?',
+        text: "This will empty your cart",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, empty it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
     
+            productCart.length = 0;
+    localStorage.setItem("product-cart", JSON.stringify(productCart));
     cargarProductos();
+
+          swalWithBootstrapButtons.fire(
+            'Deleted!',
+            'Your cart is now empty.',
+            'success'
+          )
+    
+          
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Your cart remains intact',
+            'error'
+          )
+        }
+      })
+
+    
+
 }
+
+
+
+
+// fin prueba
+
+
+// function vaciarCarrito(){
+//     productCart.length = 0;
+//     localStorage.setItem("product-cart", JSON.stringify(productCart));
+    
+//     cargarProductos();
+// }
 
 function updateTotal(){
     const totalCalulado = productCart.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
@@ -104,3 +160,4 @@ function buyCart(){
     containerActionsCart.classList.add("disabled");
     containerBoughtCart.classList.remove("disabled");
 }
+
