@@ -116,7 +116,6 @@ function vaciarCarrito(){
     
           
         } else if (
-          /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
         ) {
           swalWithBootstrapButtons.fire(
@@ -126,23 +125,7 @@ function vaciarCarrito(){
           )
         }
       })
-
-    
-
 }
-
-
-
-
-// fin prueba
-
-
-// function vaciarCarrito(){
-//     productCart.length = 0;
-//     localStorage.setItem("product-cart", JSON.stringify(productCart));
-    
-//     cargarProductos();
-// }
 
 function updateTotal(){
     const totalCalulado = productCart.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
