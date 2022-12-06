@@ -1,7 +1,6 @@
 let productCart = localStorage.getItem("product-cart");
 productCart = JSON.parse(productCart);
 
-
 const containerEmptyCart = document.querySelector("#empty-cart");
 const containerProducts = document.querySelector("#cart-products");
 const containerActionsCart = document.querySelector("#cart-actions");

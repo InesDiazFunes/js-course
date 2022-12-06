@@ -1,0 +1,34 @@
+
+[{
+    "id": "headphone-01",
+    "titulo": "Bose Quiet Confort",
+    "imagen": "./img/Bose.jpg",
+    "categoria": {
+        "nombre": "News",
+        "id": "News"
+    },
+    "precio": 187000
+},
+{
+    "id": "headphone-02",
+    "titulo": "Urbanista Miami White Pearl",
+    "imagen": "./img/Urbanista.jpeg",
+    "categoria": {
+        "nombre": "News",
+        "id": "News"
+    },
+    "precio": 160000
+},
+{
+    "id": "headphone-03",
+    "titulo": "Sony Bluetooth Wireless",
+    "imagen": "./img/Sony.jpeg",
+    "categoria": {
+        "nombre": "News",
+        "id": "News"
+    },
+    "precio": 115000
+}]
+
+
+
